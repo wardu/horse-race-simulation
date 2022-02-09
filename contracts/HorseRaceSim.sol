@@ -6,5 +6,7 @@ pragma solidity ^0.8.0;
 
 contract HorseRaceSim {
 
-// TO COMPLETE
+    // Creates empty list of players and empty value for 'admin'
+    address payable[] public players;
+    address public admin;
 }
