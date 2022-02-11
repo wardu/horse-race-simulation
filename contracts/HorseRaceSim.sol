@@ -21,7 +21,7 @@ contract HorseRaceSim {
     
     modifier onlyOwner() {
         // Ensure only owner can call functions with this modifier
-        require(admin == msg.sender, "You are not the owner");
+        require(admin == msg.sender, "Only the owner can call that function!");
         _;
     }
 }
