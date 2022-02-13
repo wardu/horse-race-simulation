@@ -40,4 +40,9 @@ contract HorseRaceSim {
     function getPlayers() public view onlyOwner returns(uint){
         return (players.length);
     }
+
+    function random() internal view returns(uint){
+        /////////TODO
+    }
+
 }
