@@ -30,4 +30,9 @@ contract HorseRaceSim {
         // Add sender's address to players list
         players.push(payable(msg.sender));
     }
+
+     // Allows owner to query balance of contract
+    function getBalance() public view onlyOwner returns(uint){ 
+        return address(this).balance;
+    }
 }
