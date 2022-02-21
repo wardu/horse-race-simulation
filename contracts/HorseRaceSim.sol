@@ -42,7 +42,7 @@ contract HorseRaceSim {
     }
 
     function getRandomNumber() internal view returns(uint){
-        return uint(keccak256(abi.encodePacked(owner, block.timestamp)))
+        return uint(keccak256(abi.encodePacked(owner, block.timestamp)));
     }
 
     function pickWinner() public onlyOwner {
