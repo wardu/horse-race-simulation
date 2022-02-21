@@ -8,18 +8,18 @@ contract HorseRaceSim {
     
     // Creates empty list of players and empty value for 'admin'
     address payable[] public players;
-    address public admin;
+    address public owner;
     
     constructor() {
         // Makes contract's initializing account, 'admin'
-        admin = msg.sender;
-        //Add admin (the house) to list of payable players
-        players.push(payable(admin));
+        owner = msg.sender;
+        //Add owner (the house) to list of payable players
+        players.push(payable(owner));
     }
     
     modifier onlyOwner() {
         // Ensure only owner can call functions with this modifier
-        require(admin == msg.sender, "Only the owner can call that function!");
+        require(owner == msg.sender, "Only the owner can call that function!");
         _;
     }
     
