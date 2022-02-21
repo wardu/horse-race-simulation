@@ -24,7 +24,7 @@ contract HorseRaceSim {
     }
     
     /// Receive function allows contract to accept 'bets' of 0.1 Ether
-    receive() external payable {
+    function enter() external payable {
         require(msg.value == 0.1 ether , "Bets placed must be of size 0.1 ETH");
         
         // Add sender's address to players list
