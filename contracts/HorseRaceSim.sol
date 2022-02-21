@@ -45,5 +45,11 @@ contract HorseRaceSim {
         return uint(keccak256(abi.encodePacked(owner, block.timestamp)))
     }
 
-    
+    function pickWinner() public onlyOwner {
+ 
+        require(players.length == 6 , "This is a 6 horse race. More players needed");
+        
+        address payable winner;
+        winner = players[getRandomNumber() % players.length];
+
 }
