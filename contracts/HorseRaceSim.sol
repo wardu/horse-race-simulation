@@ -52,4 +52,13 @@ contract HorseRaceSim {
         address payable winner;
         winner = players[getRandomNumber() % players.length];
 
+        // 95% balance to winner
+        uint winnings = getBalance() * 95 / 100;
+        // 5% admin fee for owner
+        uint adminFee = getBalance() * 5 / 100;
+
+        winner.transfer( winnings );
+        payable(owner).transfer( adminFee);
+        
+
 }
