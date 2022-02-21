@@ -31,12 +31,12 @@ contract HorseRaceSim {
         players.push(payable(msg.sender));
     }
 
-     // Allows owner to query balance of contract
+     // Allows anyone to query balance of contract
     function getBalance() public view returns(uint){ 
         return address(this).balance;
     }
 
-    // Allows owner to query number of players in game
+    // Allows anyone to query number of players in game
     function getPlayers() public view returns(uint){
         return (players.length);
     }
