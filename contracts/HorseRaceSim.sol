@@ -32,12 +32,12 @@ contract HorseRaceSim {
     }
 
      // Allows owner to query balance of contract
-    function getBalance() public view onlyOwner returns(uint){ 
+    function getBalance() public view returns(uint){ 
         return address(this).balance;
     }
 
     // Allows owner to query number of players in game
-    function getPlayers() public view onlyOwner returns(uint){
+    function getPlayers() public view returns(uint){
         return (players.length);
     }
 
