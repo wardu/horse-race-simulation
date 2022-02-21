@@ -41,8 +41,9 @@ contract HorseRaceSim {
         return (players.length);
     }
 
-    function random() internal view returns(uint){
-        /////////TODO
+    function getRandomNumber() internal view returns(uint){
+        return uint(keccak256(abi.encodePacked(owner, block.timestamp)))
     }
 
+    
 }
