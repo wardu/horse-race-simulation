@@ -13,8 +13,6 @@ contract HorseRaceSim {
     constructor() {
         // Makes contract's initializing account, 'admin'
         owner = msg.sender;
-        //Add owner (the house) to list of payable players
-        players.push(payable(owner));
     }
     
     modifier onlyOwner() {
