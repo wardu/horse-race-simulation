@@ -57,8 +57,13 @@ contract HorseRaceSim {
         // 5% admin fee for owner
         uint adminFee = getBalance() * 5 / 100;
 
-        winner.transfer( winnings );
+        winner.transfer(winnings);
         payable(owner).transfer( adminFee);
         
+        resetPlayers();
+    }
 
+    function resetPlayers() internal {
+        players = new address payable[](0);
+    }
 }
