@@ -2,7 +2,8 @@
 pragma solidity ^0.8.0;
  
 /// @title Horse Race Simulation
-/// @dev Simulates a betting situation, 1 player vs 4 NPCs and pays out to the winner
+/// Simulates a betting situation between 6 horses (players) and pays out
+/// to a randomly chosen winner.
 
 contract HorseRaceSim {
     
@@ -39,6 +40,7 @@ contract HorseRaceSim {
         return (players.length);
     }
 
+/// WARNING - not for production due to pseudo-random nature of number.
     function getRandomNumber() internal view returns(uint){
         return uint(keccak256(abi.encodePacked(owner, block.timestamp)));
     }
